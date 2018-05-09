@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: properties
     
@@ -20,13 +20,22 @@ class ViewController: UIViewController {
         lbl1.text = "Escreva na caixa de texto"
     }
     
-    
-    
-    
+    //MARK: ciclovida
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        txt1.delegate = self as UITextFieldDelegate
     }
 
+    
+    //MARK: UITextFieldDelegate
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        lbl1.text = txt1.text
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
