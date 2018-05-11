@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88A17E5420A5D5E400F367D7 /* VCDetalhe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E5320A5D5E400F367D7 /* VCDetalhe.swift */; };
 		88A7717F20A337BD00A3A8F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7717E20A337BD00A3A8F4 /* AppDelegate.swift */; };
 		88A7718120A337BD00A3A8F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7718020A337BD00A3A8F4 /* ViewController.swift */; };
 		88A7718420A337BD00A3A8F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A7718220A337BD00A3A8F4 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88A17E5320A5D5E400F367D7 /* VCDetalhe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDetalhe.swift; sourceTree = "<group>"; };
 		88A7717B20A337BD00A3A8F4 /* tabelas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabelas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A7717E20A337BD00A3A8F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88A7718020A337BD00A3A8F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				88A7718520A337BF00A3A8F4 /* Assets.xcassets */,
 				88A7718720A337BF00A3A8F4 /* LaunchScreen.storyboard */,
 				88A7718A20A337BF00A3A8F4 /* Info.plist */,
+				88A17E5320A5D5E400F367D7 /* VCDetalhe.swift */,
 			);
 			path = tabelas;
 			sourceTree = "<group>";
@@ -96,11 +99,12 @@
 				TargetAttributes = {
 					88A7717A20A337BD00A3A8F4 = {
 						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 88A7717620A337BD00A3A8F4 /* Build configuration list for PBXProject "tabelas" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -136,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A7718120A337BD00A3A8F4 /* ViewController.swift in Sources */,
+				88A17E5420A5D5E400F367D7 /* VCDetalhe.swift in Sources */,
 				88A7717F20A337BD00A3A8F4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,8 +275,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -283,10 +287,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9EJMNHN7R;
 				INFOPLIST_FILE = tabelas/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ipvc.estg.tabelas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -301,10 +302,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9EJMNHN7R;
 				INFOPLIST_FILE = tabelas/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ipvc.estg.tabelas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
