@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880DBDFA20AC6B6A00041F40 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880DBDF920AC6B6A00041F40 /* MyTableViewCell.swift */; };
+		880DBE1F20AC6F8700041F40 /* EntityCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880DBE1E20AC6F8700041F40 /* EntityCity.swift */; };
 		88A17E5420A5D5E400F367D7 /* VCDetalhe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A17E5320A5D5E400F367D7 /* VCDetalhe.swift */; };
 		88A7717F20A337BD00A3A8F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7717E20A337BD00A3A8F4 /* AppDelegate.swift */; };
 		88A7718120A337BD00A3A8F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A7718020A337BD00A3A8F4 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880DBDF920AC6B6A00041F40 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		880DBE1E20AC6F8700041F40 /* EntityCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityCity.swift; sourceTree = "<group>"; };
 		88A17E5320A5D5E400F367D7 /* VCDetalhe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDetalhe.swift; sourceTree = "<group>"; };
 		88A7717B20A337BD00A3A8F4 /* tabelas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabelas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A7717E20A337BD00A3A8F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880DBE1D20AC6F5C00041F40 /* entities */ = {
+			isa = PBXGroup;
+			children = (
+				880DBE1E20AC6F8700041F40 /* EntityCity.swift */,
+			);
+			path = entities;
+			sourceTree = "<group>";
+		};
 		88A7717220A337BD00A3A8F4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +68,7 @@
 		88A7717D20A337BD00A3A8F4 /* tabelas */ = {
 			isa = PBXGroup;
 			children = (
+				880DBE1D20AC6F5C00041F40 /* entities */,
 				88A7717E20A337BD00A3A8F4 /* AppDelegate.swift */,
 				88A7718020A337BD00A3A8F4 /* ViewController.swift */,
 				88A7718220A337BD00A3A8F4 /* Main.storyboard */,
@@ -63,6 +76,7 @@
 				88A7718720A337BF00A3A8F4 /* LaunchScreen.storyboard */,
 				88A7718A20A337BF00A3A8F4 /* Info.plist */,
 				88A17E5320A5D5E400F367D7 /* VCDetalhe.swift */,
+				880DBDF920AC6B6A00041F40 /* MyTableViewCell.swift */,
 			);
 			path = tabelas;
 			sourceTree = "<group>";
@@ -140,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A7718120A337BD00A3A8F4 /* ViewController.swift in Sources */,
+				880DBE1F20AC6F8700041F40 /* EntityCity.swift in Sources */,
+				880DBDFA20AC6B6A00041F40 /* MyTableViewCell.swift in Sources */,
 				88A17E5420A5D5E400F367D7 /* VCDetalhe.swift in Sources */,
 				88A7717F20A337BD00A3A8F4 /* AppDelegate.swift in Sources */,
 			);
@@ -287,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9EJMNHN7R;
 				INFOPLIST_FILE = tabelas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ipvc.estg.tabelas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z9EJMNHN7R;
 				INFOPLIST_FILE = tabelas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ipvc.estg.tabelas;
 				PRODUCT_NAME = "$(TARGET_NAME)";

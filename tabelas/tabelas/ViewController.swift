@@ -13,18 +13,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var array = ["Lisboa", "Porto", "Viseu"]
     var arrayAdd = ["L", "P", "V"]
     var arrayB = [false, false, false]
+    var arrayEntities = [EntityCity]()
     
     @IBOutlet weak var tableView: UITableView!
+    
+    private func createArrayCities(){
+        var c1:EntityCity = EntityCity()
+        c1.name = "Lisboa"
+        c1.country = "Portugal"
+        c1.habitantes = 2000
+        c1.imagem = "city"
+        arrayEntities.append(c1)
+        
+        c1 = EntityCity()
+        c1.name = "Porto"
+        c1.country = "Portugal"
+        c1.habitantes = 1000
+        c1.imagem = "city"
+        arrayEntities.append(c1)
+        
+        c1 = EntityCity()
+        c1.name = "Braga"
+        c1.country = "Portugal"
+        c1.habitantes = 100
+        c1.imagem = "city"
+        arrayEntities.append(c1)
+        
+        
+    }
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+        /*let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         cell.textLabel?.text = array[indexPath.row]
         cell.detailTextLabel?.text = "info"
-        cell.accessoryType = UITableViewCellAccessoryType.detailDisclosureButton
+        cell.accessoryType = UITableViewCellAccessoryType.detailDisclosureButton*/
         
         /*if arrayB[indexPath.row]{
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
@@ -33,6 +59,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell.accessoryType = UITableViewCellAccessoryType.none
         }
         */
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
+        let ec:EntityCity = arrayEntities[indexPath.row]
+        cell.lblTitulo.text = ec.name
+        cell.lblSubTitulo.text = ec.country
+        cell.lblInfo.text = String(ec.habitantes)
+        cell.imagem.image = UIImage(named: ec.imagem)
+        
+        
         return cell
     }
     
@@ -43,7 +78,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         editar.backgroundColor = UIColor.blue
         
-        let delete = UITableViewRowAction(style: .default, title: "Apagar"){action, index in print("apagar: " + String(index.row))
+        let delete = UITableViewRowAction(style: .default, title: "Apagar"){action, index in
+            print("apagar: " + String(index.row))
+            self.array.remove(at: index.row)
+            tableView.reloadData()
         }
         
         delete.backgroundColor = UIColor.red
@@ -83,6 +121,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let idx = sender as! IndexPath
             let vcdetalhe = (segue.destination as! VCDetalhe)
             vcdetalhe.cidade = array[idx.row]
+            vcdetalhe.id_cidade = idx.row
         }
     }
     
@@ -90,6 +129,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let details = segue.source as! VCDetalhe
         let cidade:String = details.txtCidade.text!
         print(cidade)
+        
+        if(details.id_cidade != -1){
+            array.remove(at: details.id_cidade)
+        }
+        
         array.append(cidade)
         tableView .reloadData()
     }
@@ -97,6 +141,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        createArrayCities()
     }
 
     

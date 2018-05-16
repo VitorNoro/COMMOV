@@ -10,11 +10,14 @@ import UIKit
 
 class VCDetalhe: UIViewController{
     var cidade : String = ""
+    var id_cidade : Int = -1
+    
     @IBOutlet weak var txtCidade: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isToolbarHidden = false;
+        txtCidade.text = cidade
         
         print(cidade)
     }

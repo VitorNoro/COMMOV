@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cidade" representedClassName="Cidade" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tem_pais" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pais" inverseName="tem_cidade" inverseEntity="Pais" syncable="YES"/>
+    </entity>
+    <entity name="Pais" representedClassName="Pais" syncable="YES">
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="populacao" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="tem_cidade" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cidade" inverseName="tem_pais" inverseEntity="Cidade" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cidade" positionX="-45" positionY="0" width="128" height="73"/>
+        <element name="Pais" positionX="198" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>
