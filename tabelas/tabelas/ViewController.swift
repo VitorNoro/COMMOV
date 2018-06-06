@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.lblInfo.text = String(ec.habitantes)
         cell.imagem.image = UIImage(named: ec.imagem)
         
-        
+ 
         return cell
     }
     
